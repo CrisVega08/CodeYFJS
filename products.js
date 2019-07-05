@@ -1,4 +1,4 @@
-export default products = [
+export default [
 'Harina de trigo',
 'Harina para tortas',
 'Pasta para sopa',
