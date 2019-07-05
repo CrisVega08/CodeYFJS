@@ -1,4 +1,4 @@
-export default (products = [
+module.exports = [
   "Harina de trigo",
   "Harina para tortas",
   "Pasta para sopa",
@@ -43,4 +43,4 @@ export default (products = [
   "Arepas rellenas de algo",
   "Helado de crema",
   "Ensalada de frutas"
-]);
+];
