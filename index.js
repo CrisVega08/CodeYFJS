@@ -28,7 +28,36 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 
 // TODO: Función Principal getCostList
 function getCostList(client, productsIds, quantities) {
-  // Código aquí...
+
+  let cant = 0;
+  let cantC =0;
+  let restant = 0;
+
+  var nam_prod = productsIds.map((element, index) => {  
+    //return products[element];
+    console.log(element);
+    console.log('nombre: ', products[element]);
+    console.log('Precio:', costs[element]);
+    
+    console.log('Cantidad a comprar:', productsQuantities[index]);
+
+    cant = quantities[element];
+    cantC = productsQuantities[index];
+    console.log('cantidad:', cant);
+    //Verificar que haya cantidad de producto en stock
+    if((cant > 0) && (cantC <= cant)){
+      restant = cant - cantC;
+
+    }
+
+    let cant_rest = quantities[element] - productsQuantities[index]; 
+
+    console.log(cant_rest);
+  });
+  //console.log(nam_prod);
+
+  
+
 }
 
 const result = getCostList(clients[0], productsListIds, productsQuantities);

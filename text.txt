@@ -1,8 +1,18 @@
 Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
 
 1. ¿Qué es let, const y var y cuáles son sus diferencias?
+let: Serà accedida dentro del scope o bloque donde fue declarada.
+var: Fuera del scope es global.
+const: Valor constante y fijo que no cambia en el flujo del programa.
 2. ¿Qué es el scope?
+Bloque o entorno donde se define una variable, es  el ambito.
 3. ¿Que es coerción?
+No es necesario especificar el tipo de dato, el interpretador de JS realiza la conversion por nosotros.
 4. Defina Hoisting y ¿cómo funciona?
+Elevacion de los valoreas asignados a una variable
 5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?,
   sabiendo que todos son para hacer búsqueda en arrays.
+  find(): Aplicado a Arrays para hallar y devolver el primer valor que cumple la condicion deseada.
+  filter(): Crear nuevo array a partir del inicial con la seleccion de los emelemento deseasdos en la condicion.
+  includes(): Nos informa si un Array incluye un elementodeterminado. Resultado: True or False.
+  indexOf(): Devuelve la posicion de un elemenro dentro de un array.
