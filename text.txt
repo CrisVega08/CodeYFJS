@@ -1,8 +1,92 @@
 Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
 
 1. ¿Qué es let, const y var y cuáles son sus diferencias?
+  
+R/: let, const, y var son palabras claves que definen en Javascript las variables. 
+ 
+ se diferencian porque const no puede ser reasignada mientras que let si puede reasignarse, y ademas var es 
+ neutra entonces puede hacerlas de let o de const.
+
+const si ="yo"
+console.log(si)
+yo
+si = "mi" // Error porque use una variable constante
+----------------------------------------------------------
+let com = "pizza"
+
+console.log(com)
+pizza
+
+com = "pan"
+'pan'
+console.log(com)
+pan
+
+
+
+
 2. ¿Qué es el scope?
+
+R/: es el contexto en el que un valor o expresion puede ser alcanzado o influenciado. ejemplo si una expresion
+no esta en el Scope correcto no va a servir para mi codigo.
+
+var externa = "soy universal"
+
+function prueba(valor){
+ return valor + "es"
+}
+
+conole.log(externa) // "soy universales"
+-------------------------------------------------
+
+function prueba(valor){
+  var externa = "soy universal"
+
+ return valor + "es"
+
+ conole.log(externa) // "soy universales"
+}
+
+conole.log(externa) // Error
+
+
+
 3. ¿Que es coerción?
+
+R/: son la operaciones entre tipos de datos diferentes que busca convertir un tipo de dato a otro en estos casos
+ Javascript tiene una forma curiosa de interpretarlo
+ejemplos:
+ 
+  42 + ""  // --> "42"
+  129  + "8"  // --> 1298         
+  2 + true // --> 3
+  false + true // --> 1
+  false + 4 // --> 4
+  324 - "3" // --> 321
+ 
+
+
 4. Defina Hoisting y ¿cómo funciona?
+
+R/: es donde se almacena y donde luego se va a buscar una declaracion para ser usada esto va a depender de su alcance
+y el ambito.
+
+var mentores = 12
+...
+...
+...
+....
+..
+...
+...
+console.log(mentores) // 12
+
 5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?,
   sabiendo que todos son para hacer búsqueda en arrays.
+
+R/: .find() busca tenindo una instruccion, por ejemplo en una funcion los elementos del array que cumplen lo 
+que dice esa funcion.
+ .filter() filtra a traves de una condicion los elementos del array, devolviendo los que la cumplen esa condicion.
+
+.includes() busca en el array si esta incluido un elemento especifico y devuelve true o false luego de hacer la busqueda
+a includes dentro de los parentesis se puede poner lo que va a buscar EJEMPLO .includes('M')
