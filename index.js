@@ -12,9 +12,27 @@ const costs = require("./costs");
  **/
 
 const productsListIds = [34, 1, 9, 8, 23, 11, 40, 14, 6, 33, 29, 20, 41, 15, 5];
-const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7];
+const productsQuantities = [
+  2,
+  5,
+  3,
+  9,
+  2,
+  4,
+  2,
+  3,
+  10,
+  8,
+  6,
+  12,
+  4,
+  5,
+  2,
+  7,
+  7
+];
 
-/** 
+/**
  * Requerimientos:
  * 1: Dentro de la función principal deberás imprimir la lista de productos con la cantidad restante después de la compra.
  * 2: Imprimir el valor total sin aplicar el descuento. El número debe tener dos decimales.
@@ -26,15 +44,60 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 
 // Funciones adicionales aquí...
 
+let stock;
+
 // TODO: Función Principal getCostList
 function getCostList(client, productsIds, quantities) {
   // Código aquí...
+
+  const nombreproductos = productsIds.map(item => products[item]);
+  const stock = productsIds.map(item => quantity[item]);
+  const costound = productsIds.map(item => costs[item]);
+  const pedido = productsIds.map((item, index) => quantities[index]);
+
+  const nuevopedido = stock.map((item, index) => {
+    if (item < pedido[index]) {
+      return item;
+    } else {
+      return pedido[index];
+    }
+  });
+
+  const nuevostock = stock.map((item, index) => item - nuevopedido[index]);
+  console.log("******** El nuevo stock es: *********** ");
+  nuevostock.forEach((item, index) =>
+    console.log(nombreproductos[index], item)
+  );
+
+  // console.log(nombreproductos, nuevostock);
+
+  const subtotal = costound.map((item, index) => item * nuevopedido[index]);
+
+  valortotal = subtotal.reduce((a, b) => a + b);
+
+  // console.log(stock, pedido, nuevopedido);
+  //console.log(nuevopedido, costound, subtotal);
+  console.log("El valor de la compra sin descuento es: " + valortotal);
+
+  function descuento(user) {
+    if (user === "León Ceballos") {
+      return valortotal * 0.95;
+    } else if (user === "Cristian Vega") {
+      return valortotal * 0.9;
+    } else if (user === "Jesse Cogollo") {
+      return valortotal * 0.98;
+    }
+  }
+
+  return descuento(client).toFixed(2);
+
+  // console.log((valdesc = descuento(client)));
 }
 
 const result = getCostList(clients[0], productsListIds, productsQuantities);
 
 // Imprime el total de la compra
-console.log('El total de la compra es: ' + result)
+console.log("El total de la compra es: " + result);
 
 /**
  * TE RECOMENDAMOS

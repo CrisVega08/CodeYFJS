@@ -1,8 +1,30 @@
 Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
 
 1. ¿Qué es let, const y var y cuáles son sus diferencias?
+   Son formas de declarar variables, se diferencian en que const es para casos donde no va a cambiar, "var" y "let" se pueden 
+   reasignar sin embargo "let" solo se accede desde el bloque de codigo donde se define.
+
 2. ¿Qué es el scope?
+    El scope tiene que ver con la jerarquia de los bloques de programacion y el comportamiento de las variables deacuerdo donde se encuentran.
+   
+
 3. ¿Que es coerción?
+   coercion es el comportamiento que tienen operaciones entre diferentes tipos de datos. por ejemplo:
+   
+   let h = 1 + "1";
+   console.log(h);
+
+   resulta :  11 y no 2 debido al tipo de variables.
+
 4. Defina Hoisting y ¿cómo funciona?
-5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?,
-  sabiendo que todos son para hacer búsqueda en arrays.
+
+  El hoisting es la prioridad que tienen las variables cuando se declaran en un bloque de codigo, por lo tanto la declaracion se mueve al inicio mas no la asignacion de la
+
+5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?,   sabiendo que todos son para hacer búsqueda en arrays.
+   
+   El metodo "find()" evalua una condicion y retorna el primer valor que satisface dicha condicion.
+   El metodo "filter()" devueve un nuevo array que cumple con la condicion.
+   El metodo "includes()" evalua si el array contiene un elemento especifico.
+   El metodo "indexOf()" retorna el indice o posicion en el array de un elemento especificado.
+
+
