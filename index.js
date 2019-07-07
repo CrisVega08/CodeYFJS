@@ -28,8 +28,42 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 
 // TODO: Función Principal getCostList
 function getCostList(client, productsIds, quantities) {
-  // Código aquí...
+  console.log(productsIds);
+  let total = 0;
+  let stock = 0;
+  let shop = 0;
+  currentStock = 0;
+  currentStockList = [];
+  productsIds.forEach((element, index) => {
+    stock = quantity[element];
+    shop = quantities[index];
+    if (stock >= shop) {
+      total += costs[element] * shop;
+      currentStock = stock - shop;
+    } else {
+      total += stock * costs[element];
+      currentStock = 0;
+    }
+    currentStockList.push(currentStock);
+  });
+  console.log(currentStockList);
+
+  let totalPrice = total;
+  console.log(totalPrice);
+  if (client === 'Cristian Vega') {
+    let discount = (totalPrice * 0.05);
+    totalPrice = totalPrice - discount;
+  } else if (client === 'León Ceballos') {
+    let discount = (totalPrice * 0.10);
+    totalPrice = totalPrice - discount;
+  }
+  else {
+    let discount = (totalPrice * 0.02);
+    totalPrice = totalPrice - discount;
+  }
+  return totalPrice.toFixed(2);
 }
+
 
 const result = getCostList(clients[0], productsListIds, productsQuantities);
 
