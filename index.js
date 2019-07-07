@@ -1,5 +1,5 @@
 const products = require("./products");
-const quantity = require("./quantity");
+const quantity = require("./quantity"); //kcantidad de producto
 const clients = require("./clients");
 const costs = require("./costs");
 
@@ -28,7 +28,40 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 
 // TODO: Función Principal getCostList
 function getCostList(client, productsIds, quantities) {
-  // Código aquí...
+    let compra = 0;
+    let descuento = 0;
+    productsListIds.forEach(function(element, index) {
+        // console.log(products[element]);
+        // console.log(quantity[element]);
+        // console.log(costs[element]);
+        // console.log(quantities[element]);
+        let cantidadStock = quantity[element];
+        let cantidadComprar = quantities[index]
+        let costo = costs[element];
+        let total = costs[element] * cantidadComprar;
+
+        // console.log(total);
+
+        if (cantidadStock >= cantidadComprar) {
+            compra = compra + (total);
+            cantidadStock = cantidadStock - cantidadComprar;
+        } else {
+            compra = compra + (costo * cantidadStock);
+        }
+        console.log(compra, cantidadStock);
+
+    });
+
+    if (client === 'Cristian Vega') {
+        compra = compra - (compra * 0.1);
+    } else if (client === 'León Ceballos') {
+        compra = compra - (compra * 0.05);
+    } else if (client === 'Jesse Cogollo') {
+        compra = compra - (compra * 0.02);
+    } else {
+        compra = compra;
+    }
+    console.log(compra.toFixed(2));
 }
 
 const result = getCostList(clients[0], productsListIds, productsQuantities);
