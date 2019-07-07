@@ -1,6 +1,10 @@
 Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
 
 1. ¿Qué es let, const y var y cuáles son sus diferencias?
+
+
+
+
 2. ¿Qué es el scope?
 3. ¿Que es coerción?
 4. Defina Hoisting y ¿cómo funciona?
