@@ -29,9 +29,73 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 // TODO: Función Principal getCostList
 function getCostList(client, productsIds, quantities) {
   // Código aquí...
+
+  let Cristian = 0
+
+  let productos =  productsListIds. map(function(posicion , index){
+      console.log("productos" ,products[posicion]);
+      console.log("Costo" ,costs[posicion]);
+      console.log("Cantidad" ,quantity[posicion]);
+      console.log("Compra" , quantities[index])
+    
+  
+
+    let cantidadInicial = quantity[posicion]
+    let cantidadCompra = quantities[index]
+
+    if( cantidadInicial >= cantidadCompra){
+        
+      Cristian = Cristian + ( costs[posicion] * cantidadCompra);
+
+        
+    } else{
+
+      Cristian = Cristian + ( costs[posicion] * cantidadInicial);
+    }
+
+    total = descuento (Cristian , client)
+
+
+  });
+
+  console.log("Total:" ,Cristian);
+   
+ return total
+  
 }
 
+function descuento (total , client){
+ 
+  let descuento = 0
+
+   if(client == "León Ceballos"){
+      descuento = total * 5 / 100
+      
+   }
+
+   if(client == "Cristian Vega"){
+    descuento = total * 10 / 100
+    
+ }
+
+ if(client == "Jesse Cogollo"){
+  descuento = total * 2 / 100
+  
+}
+
+return total - descuento
+
+ 
+
+}
+
+
+
+
+
 const result = getCostList(clients[0], productsListIds, productsQuantities);
+
+
 
 // Imprime el total de la compra
 console.log('El total de la compra es: ' + result)
