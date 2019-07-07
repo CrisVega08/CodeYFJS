@@ -1,8 +1,27 @@
 Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
 
 1. ¿Qué es let, const y var y cuáles son sus diferencias?
+let es una variable que se ejecuta en el el bloque en que se crea, const funciona de una maner similar al 
+let, solo que no se puede modificar el valor almacenado, var es una variable global, se puede usar en cualquier
+parte del codigo (hasta en funciones).
+
 2. ¿Qué es el scope?
+las variables pueden ser locales o globales, el scope es el alcance que pueden tener las variables en el codigo,
+por ejemplo las variables let y const, son variables locales y las var son globales, las locales solo se pueden 
+acceder en el bloque  donde se creo. las globales se pueden accedes desde cualquier parte del codigo
+
 3. ¿Que es coerción?
+la coercion es la accion de declarar una variable con un tipo de datos y utilizarla como otro tipo, por ejemplo
+cuando se crea una variable var = '1', puede ser un string o un booleano al mismo tiempo
+
 4. Defina Hoisting y ¿cómo funciona?
+el hoisting es el metodo con el javascript ejecuta el codigo, toma las declaraciones de las varibles y las
+lleva al inicio.
+
 5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?,
   sabiendo que todos son para hacer búsqueda en arrays.
+
+  El metodo find(), devuelve el primer valor que cumple con una condicion.
+  El metodo filter(), devuelve todos los valores que cumplen una condicion dada.
+  El metodo includes(), busca si un valor se encuentra en una array, si lo encuentra devuelve un true, sino retorna un false
+  El metodo indexOf(), busca una elementro en un arrat, si lo encuentra retorna el valor del index, si no lo encunatra retorna un -1

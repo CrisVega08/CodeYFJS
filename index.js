@@ -24,17 +24,65 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 
 // TODO: Si crees que es necesesario incluye más funciones para las pequeñas tareas
 
-// Funciones adicionales aquí...
+// Funciones adicionales aquí...productsIds
+
+function cliente(name, num){
+  let res;
+  if(name === 'Cristian Vega'){
+    res = (num*5)/100;
+    return res = num-res;
+  }
+  else if(name === 'León Ceballos'){
+    res = (num*10)/100;
+    return res = num-res;
+  }
+  else if(name === 'Jesse Cogollo'){
+    res = (num*2)/100;
+    return res = num-res;
+  }
+  else{
+    console.log("el cliente no esta");
+  }
+}
+
 
 // TODO: Función Principal getCostList
-function getCostList(client, productsIds, quantities) {
+function getCostList(client, productsIds, quantities) {console.log(valor);
   // Código aquí...
+  var total = 0;
+  var valor = 0;
+  var total_cliente;
+  let cantidad;
+  
+  console.log("LISTA DE COMPRA \n");
+
+  productsIds.forEach((productID, index) => {
+    if(quantity[productID] >= quantities[index]){
+      valor = costs[productID] * quantities[index];
+      cantidad = quantity[productID] - quantities[index];
+    } else {
+      valor = costs[productID] * quantity[productID];
+      cantidad = 0;
+    }
+    total = total + valor;
+    console.log("Producto: "+ products[productID]);
+    console.log("Cantidad adquirida: "+ quantities[index]);
+    console.log("Cantidad restante: "+ cantidad);
+    console.log("Precio de la unidad: "+ costs[productID].toFixed(2));
+    console.log("Precio total del producto: "+ valor.toFixed(2));
+    console.log("\n");
+  });
+
+  total_cliente = cliente(client, total);
+
+  console.log("El precio sin el descuento es de: "+total);
+  return total_cliente;
 }
 
 const result = getCostList(clients[0], productsListIds, productsQuantities);
 
 // Imprime el total de la compra
-console.log('El total de la compra es: ' + result)
+console.log('El total de la compra es: ' + result.toFixed(2))
 
 /**
  * TE RECOMENDAMOS
