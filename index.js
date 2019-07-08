@@ -59,21 +59,26 @@ function getCostList(client, productsIds, quantities) {
     } else {
       subtotal = inventario * costs[element];
     }
-    console.log(subtotal);
+    // console.log(subtotal);
     total = subtotal + total;
 
-    if (client) {
-      total = total - 0.1;
-    } else if (client[1]) {
-      total = total - 0.5;
+    if (client === "Cristian Vega") {
+      total = total - (total * 0.1) / 100;
+      // console.log("este es el valor de compra Cris" + total);
+    } else if (client === "León Ceballos") {
+      total = total - (total * 0.05) / 100;
+      // console.log("este es el valor de compra Juan" + total);
+    } else if (client === "Jesse Cogollo") {
+      total = total - (total * 0.02) / 100;
+      // console.log("este es el vaor compra jesse" + total);
     } else {
-      total = total - 0.2;
+      total = total;
     }
   });
-  console.log(total);
+  console.log(total.toFixed(2));
 }
 
-const result = getCostList(clients[0], productsListIds, productsQuantities);
+const result = getCostList(clients[2], productsListIds, productsQuantities);
 
 // Imprime el total de la compra
 console.log("El total de la compra es: " + result);
