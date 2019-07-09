@@ -1,5 +1,5 @@
 module.exports = [
-  'Cristian Vega',
-  'León Ceballos',
-  'Jesse Cogollo'
+    'Cristian Vega',
+    'León Ceballos',
+    'Jesse Cogollo'
 ]

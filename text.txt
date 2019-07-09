@@ -1,8 +1,101 @@
 Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
 
 1. ¿Qué es let, const y var y cuáles son sus diferencias?
+Let => Nos permite declarar variables  ya sean globales o locales y No se reasigana el valor de esta.
+
+Ejemplo: 
+
+let m = 'Milvia';
+
+if (true) {
+    let m = 'Dayana';
+    console.log(m); //Dayana
+}
+
+console.log(m); //Milvia
+
+var => Nos permite declara variables ya sean globales o locales pero al momento de la ejecución se reasigna el valor de la variable.
+
+Ejemplo: 
+
+var m = 'Milvia'
+
+if (true) {
+    var m = 'Dayana';
+    console.log(m); //Dayana
+}
+
+console.log(m); //Dayana
+
 2. ¿Qué es el scope?
+Nos indica a que parte del programa podemos acceder
+Global => Se puede acceder desde cualquier parte del código.
+Local => solo se puede acceder desde un bloque de código  y es accesible durante toda la ejecución una función.
+
+Ejemplo: 
+
+let m = 'Milvia'; //scope Global
+
+if (true) {
+    let m = 'Dayana'; //scope Local
+    console.log(m); //Dayana
+}
+
+console.log(m); //Milvia
+
 3. ¿Que es coerción?
+La coerciín fuerza a una variable de cierto tipo a tener el comportamiento de una diferente.
+
+Ejemplo:
+
+console.log( "2" - 2 ); // 0
+console.log([] == [])    //false
+console.log(3 + "1")     //"31" 
+
 4. Defina Hoisting y ¿cómo funciona?
+Hoisting lo que hace es reservar espacio en memoria para todas tus variables.
+
+Ejemplo:
+
+console.log(a);
+var a = 'hola mundo'; //ejecuta 'undefined' pero no genera ningun error
+
+function miNombre() {
+    console.log(m);
+    var m= 'Milvia';
+} //Esta función no ejecuta ningún valor pero tampoco me genera ningún error.
+Lo recomendable es declara las variables antes de que estas sean invocadas.
+
 5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?,
   sabiendo que todos son para hacer búsqueda en arrays.
+
+   find() => Devuelve el primer valor del array en caso de cumplir con una condición. 
+
+Ejemplo: 
+
+let arr = [54, 48, 99, 75];
+console.log(arr.find(valor => valor === 99) === 99); // true
+console.log(arr.find(valor => valor === 11) === 11); // false  
+
+    filter() => Devuelve un nuevo array y sirve para foltrar elementos de acuerdo a las condiciones
+
+Ejemplo: 
+
+let arr = [54, 48, 99, 75];
+console.log(arr.filter(valor => valor===99).length > 0); // true
+console.log(arr.filter(valor => valor===11).length > 0); // false
+
+    includes()  => Comprueba si un Array incluye un elemento con el valor del argumento. La comprobación se inicia por defecto desde la primera posición.
+
+Ejemplo: 
+
+let arr = [54, 48, 99, 75];
+console.log(arr.includes(99)); // true
+console.log(arr.includes(11)); // false
+
+    indexOf() => Devuelve el inidice de un elemento en el array
+
+Ejemplo: 
+
+    let arr = [54, 48, 99, 75];
+    console.log(arr.indexOf(48)) // 1

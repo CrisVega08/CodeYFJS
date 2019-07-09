@@ -29,7 +29,6 @@ const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7]
 // TODO: Función Principal getCostList
 function getCostList(client, productsIds, quantities) {
     let compra = 0;
-    let descuento = 0;
     productsListIds.forEach(function(element, index) {
         // console.log(products[element]);
         // console.log(quantity[element]);
@@ -48,12 +47,12 @@ function getCostList(client, productsIds, quantities) {
         } else {
             compra = compra + (costo * cantidadStock);
         }
-        console.log(compra, cantidadStock);
+        console.log('El valor de la compra es: ' + compra, 'y La cantidad que se encuentra en stock es: ' + cantidadStock);
 
     });
 
     if (client === 'Cristian Vega') {
-        compra = compra - (compra * 0.1);
+        compra = compra - (compra * 0.10);
     } else if (client === 'León Ceballos') {
         compra = compra - (compra * 0.05);
     } else if (client === 'Jesse Cogollo') {
@@ -61,13 +60,13 @@ function getCostList(client, productsIds, quantities) {
     } else {
         compra = compra;
     }
-    console.log(compra.toFixed(2));
+    console.log('El total de la compra señor ' + client + ' es de: ' + compra.toFixed(2) + ' 🤗');
 }
 
 const result = getCostList(clients[0], productsListIds, productsQuantities);
 
 // Imprime el total de la compra
-console.log('El total de la compra es: ' + result)
+// console.log('El total de la compra es: ' + result)
 
 /**
  * TE RECOMENDAMOS
