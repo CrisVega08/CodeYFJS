@@ -1,0 +1,12 @@
+Defina cada uno de los siguientes conceptos (con sus palabras) y proporcione ejemplos.
+
+1. ¿Qué es let, const y var y cuáles son sus diferencias?
+  R. Let, const y Var son variables, cada una de ellas puede cargar informacion guardada en un posicion
+  const por ejemplo no se puede renombrar, let tiene un scope universal y puede consultarse desde cualquier posicion. y Var desde la ultima actualizacion se recomienda trabajar con let.  Las variables guarda informacion en posiciones de memoria.
+2. ¿Qué es el scope?
+  R. El Scope se refiere al contexto donde esta mi elemento, por ejemplo hay 2 tipos de scope. El primero es universal y se consulta en cualquier posicion y El segundo scope des de bloque y solo se puede consultar dentro de los {} o dentro del bloque. Es importante para proteger informacion que no se requiera que sea consultada por ejemplo.
+3. ¿Que es coerción? R. Es cuando unimos dos tipos de datos, ejemplo un dato tipo string con un dato tipo numero.
+4. Defina Hoisting y ¿cómo funciona? R. El Hoisting es la manera como guardo en diferentes posciones mi informacion a traves de los tres tipos de variables
+5. Explica con tus palabras ¿cuál es la diferencia entre los métodos find(), filter(), includes(), indexOf()?, sabiendo que todos son para hacer búsqueda en arrays.
+R. Todos los metodos corresponden solo para los arrays, el metodo find lo que hace encontrarme la informacion desde la funcion, el filter, realiza una busqueda de informacion en mi cadena o string, includes lo que realiza es agregar aun array una informacion que deseee enviarles sin modificar el anterior e indexOf lo que hace es organizar mi string y me busca un elemento que le mande a buscar dentro de la funcion.
+
