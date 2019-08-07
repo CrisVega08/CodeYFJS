@@ -1,4 +1,4 @@
-const products = require("./products");
+const products = require("./productsObj");
 const quantity = require("./quantity");
 const clients = require("./clients");
 const costs = require("./costs");
