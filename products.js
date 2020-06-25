@@ -42,5 +42,5 @@ module.exports = [
   "Combos – comidas rápidas",
   "Arepas rellenas de algo",
   "Helado de crema",
-  "Ensalada de frutas"
+  "Ensalada de frutas",
 ];
