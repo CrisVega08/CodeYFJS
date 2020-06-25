@@ -1,4 +1,4 @@
-const products = require("./productsObj");
+const products = require("./products");
 const quantity = require("./quantity");
 const clients = require("./clients");
 const costs = require("./costs");
@@ -12,9 +12,27 @@ const costs = require("./costs");
  **/
 
 const productsListIds = [34, 1, 9, 8, 23, 11, 40, 14, 6, 33, 29, 20, 41, 15, 5];
-const productsQuantities = [2, 5, 3, 9, 2, 4, 2, 3, 10, 8, 6, 12, 4, 5, 2, 7, 7];
+const productsQuantities = [
+  2,
+  5,
+  3,
+  9,
+  2,
+  4,
+  2,
+  3,
+  10,
+  8,
+  6,
+  12,
+  4,
+  5,
+  2,
+  7,
+  7,
+];
 
-/** 
+/**
  * Requerimientos:
  * 1: Dentro de la función principal deberás imprimir la lista de productos con la cantidad restante después de la compra.
  * 2: Imprimir el valor total sin aplicar el descuento. El número debe tener dos decimales.
@@ -34,7 +52,7 @@ function getCostList(client, productsIds, quantities) {
 const result = getCostList(clients[0], productsListIds, productsQuantities);
 
 // Imprime el total de la compra
-console.log('El total de la compra es: ' + result)
+console.log("El total de la compra es: " + result);
 
 /**
  * TE RECOMENDAMOS
